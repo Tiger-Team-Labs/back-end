@@ -1,0 +1,30 @@
+{
+  "name": "beforoapp",
+  "version": "0.1.0",
+  "description": "Back-end of the foro app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiger-Team-Labs/back-end.git"
+  },
+  "author": "Tiger Team Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tiger-Team-Labs/back-end/issues"
+  },
+  "homepage": "https://github.com/Tiger-Team-Labs/back-end#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nanoid": "^3.1.12",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
