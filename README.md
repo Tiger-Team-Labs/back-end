@@ -50,9 +50,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 ```
 
 
-###Architecture
+### 🗼 Architecture
 
-Image:
 
 ![](https://www.carlosvldz.com/descargas-pdf/archApi.png)
 
@@ -75,11 +74,11 @@ Image:
 
 
 
-* **Alfredo Martinez** - [eriksape](https://github.com/alfredomtzg)
+* **Alfredo Martinez** - [alfredomtzg](https://github.com/alfredomtzg)
 
-* **Bernardo Aguayo** - [behagoras](https://github.com/BernardoAguayoOrtega)
+* **Bernardo Aguayo** - [BernardoAguayoOrtega](https://github.com/BernardoAguayoOrtega)
 
-* **Carlos Sánchez** - [iraida07](https://github.com/carlosvldz)
+* **Carlos Sánchez** - [carlosvldz](https://github.com/carlosvldz)
 
 
 
