@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const auth = require('../../../auth');
 const TABLE = 'auth';
 
+//Function for use DB
 module.exports = function (injectedStore) {
     let store = injectedStore;
     if (!store) {
@@ -22,7 +23,7 @@ module.exports = function (injectedStore) {
                 }
             });
     }
-
+        
     async function upsert(data) {
         const authData = {
             id: data.id, 

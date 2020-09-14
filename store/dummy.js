@@ -13,6 +13,7 @@ async function get(table, id) {
     return col.filter(item => item.id === id)[0] || null;
 }
 
+//Function for update/insert
 async function upsert(table, data) {
     if (!db[table]) {
         db[table] = [];

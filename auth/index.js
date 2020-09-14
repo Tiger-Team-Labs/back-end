@@ -4,14 +4,17 @@ const error = require('../utils/error');
 
 const secret = config.jwt.secret;
 
+//Sign token
 function sign(data) {
     return jwt.sign(data, secret);
 }
 
+//Validate token
 function verify(token) {
     return jwt.verify(token, secret)
 }
 
+//Check owner property
 const check = {
     own: function(req, owner) {
         const decoded = decodeHeader(req);
@@ -23,6 +26,7 @@ const check = {
     },
 }
 
+//Get authorization token
 function getToken(auth) {
     if (!auth) {
         throw new Error('No token comes');
@@ -36,6 +40,7 @@ function getToken(auth) {
     return token;
 }
 
+//Decode token
 function decodeHeader(req) {
     const authorization = req.headers.authorization || '';
     const token = getToken(authorization);
