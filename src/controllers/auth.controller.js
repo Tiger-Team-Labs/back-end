@@ -1,4 +1,4 @@
-import user from '../models/user'
+import User from '../models/user'
 import jwt from 'jsonwebtoken'
 import config from '../config'
 import Role from '../models/role'
@@ -6,11 +6,11 @@ import Role from '../models/role'
 export const signUp = async (req, res) =>  {
     const {name, username, email, password, roles} = req.body;
 
-    const newUser = new user({
+    const newUser = new User({
         name,
         username,
         email,
-        password: await user.encryptPassword(password)
+        password: await User.encryptPassword(password)
     })
 
     if (roles) {
@@ -33,7 +33,20 @@ export const signUp = async (req, res) =>  {
 }
 
 export const logIn = async (req, res) => {
-    res.json('login')
+    
+    const userFound = await User.findOne({email: req.body.email}).populate("roles");
+    
+    if (!userFound) return res.status(400).json({message: "User not found"})
+
+    const matchPassword = await User.comparePassword(req.body.password, userFound.password)
+
+    if (!matchPassword) return res.status(401).json({token: null, message: "Invalid password"})
+
+    const token = jwt.sign({id: userFound._id}, config.SECRET, {
+        expiresIn: 86400
+    })
+
+    res.json({token})
 }
 
 
