@@ -2,15 +2,22 @@ import express from 'express'
 import morgan from 'morgan'
 import pkg from '../package.json'
 
+import {createRoles} from './libs/initialSetup'
+
 import postsRoutes from './routes/posts.routes'
+import authRoutes from './routes/auth.routes'
 
 const app = express();
+createRoles();
 
+// settings
 app.set('pkg', pkg);
 
+// middlewares
 app.use(morgan('dev'));
 app.use(express.json());
 
+// welcome routes
 app.get('/', (req, res) => {
     res.json({
         author: app.get('pkg').author,
@@ -20,6 +27,8 @@ app.get('/', (req, res) => {
     })
 })
 
-app.use('/posts', postsRoutes)
+// routes
+app.use('/api/posts', postsRoutes)
+app.use('/api/auth', authRoutes)
 
 export default app;

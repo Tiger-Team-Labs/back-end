@@ -1,8 +1,3 @@
-module.exports = {
-    api: {
-        port: process.env.API_PORT || 3000,
-    },
-    jwt: {
-        secret: process.env.JWT_SECRET || '76fb3de821e0ae1bb3414986fe3ba7fc1b020c5b5eec13dd27de7b0c5573e714',
-    },
+export default {
+    SECRET: 'c033497fa2fd1a54205e2a63fe6eb97c1a770603bc7febaefb77e4100a27cef1'
 }
