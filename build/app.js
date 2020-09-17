@@ -27,7 +27,8 @@ const app = (0, _express.default)();
 app.set('pkg', _package.default); // middlewares
 
 const corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "https://bernardoaguayoortega.github.io" //origin: "http://localhost:3000"
+
 };
 app.use((0, _cors.default)(corsOptions));
 app.use((0, _morgan.default)('dev'));
