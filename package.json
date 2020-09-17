@@ -35,5 +35,12 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
     "nodemon": "^2.0.4"
-  }
+  },
+  "browserslist": [
+		"last 3 and_chr versions",
+		"last 3 chrome versions",
+		"last 3 opera versions",
+		"last 3 ios_saf versions",
+		"last 3 safari versions"
+	]
 }

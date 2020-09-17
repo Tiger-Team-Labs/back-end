@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _mongoose = require("mongoose");
 
-var postSchema = new _mongoose.Schema({
+const postSchema = new _mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -31,4 +31,4 @@ var postSchema = new _mongoose.Schema({
 
 var _default = (0, _mongoose.model)('Post', postSchema);
 
-exports["default"] = _default;
+exports.default = _default;
