@@ -11,6 +11,8 @@ var _morgan = _interopRequireDefault(require("morgan"));
 
 var _package = _interopRequireDefault(require("../package.json"));
 
+var _regeneratorRuntime = _interopRequireDefault(require("regenerator-runtime"));
+
 var _initialSetup = require("./libs/initialSetup");
 
 var _posts = _interopRequireDefault(require("./routes/posts.routes"));
@@ -25,7 +27,8 @@ var app = (0, _express["default"])();
 app.set('pkg', _package["default"]); // middlewares
 
 app.use((0, _morgan["default"])('dev'));
-app.use(_express["default"].json()); // welcome routes
+app.use(_express["default"].json());
+app.use(_regeneratorRuntime["default"]); // welcome routes
 
 app.get('/', function (req, res) {
   res.json({
