@@ -19,7 +19,11 @@
   },
   "homepage": "https://github.com/Tiger-Team-Labs/back-end#readme",
   "dependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
     "@babel/polyfill": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -31,10 +35,6 @@
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.5",
     "nodemon": "^2.0.4"
   }
 }
