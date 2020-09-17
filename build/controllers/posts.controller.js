@@ -24,8 +24,8 @@ const createPost = async (req, res) => {
     status,
     category
   });
-  const productSaved = await newPost.save();
-  res.status(201).json(productSaved);
+  const postSaved = await newPost.save();
+  res.status(201).json(postSaved);
 };
 
 exports.createPost = createPost;

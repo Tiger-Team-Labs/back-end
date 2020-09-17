@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _express = _interopRequireDefault(require("express"));
 
+var _cors = _interopRequireDefault(require("cors"));
+
 var _morgan = _interopRequireDefault(require("morgan"));
 
 var _package = _interopRequireDefault(require("../package.json"));
@@ -24,6 +26,10 @@ const app = (0, _express.default)();
 
 app.set('pkg', _package.default); // middlewares
 
+const corsOptions = {
+  origin: "http://localhost:3000"
+};
+app.use((0, _cors.default)(corsOptions));
 app.use((0, _morgan.default)('dev'));
 app.use(_express.default.json()); // welcome routes
 
