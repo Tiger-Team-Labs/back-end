@@ -28,7 +28,7 @@ app.set('pkg', _package["default"]); // middlewares
 
 app.use((0, _morgan["default"])('dev'));
 app.use(_express["default"].json());
-app.use(_regeneratorRuntime["default"]); // welcome routes
+app.use((0, _regeneratorRuntime["default"])()); // welcome routes
 
 app.get('/', function (req, res) {
   res.json({
