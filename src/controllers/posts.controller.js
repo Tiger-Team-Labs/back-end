@@ -6,9 +6,9 @@ export const createPost = async (req, res) => {
 
     const newPost = new Post({title, content, author, status, category});
 
-    const productSaved = await newPost.save()
+    const postSaved = await newPost.save()
 
-    res.status(201).json(productSaved)
+    res.status(201).json(postSaved)
 }
 
 export const getPosts = async (req, res) => {
