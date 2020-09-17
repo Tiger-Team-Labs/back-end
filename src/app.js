@@ -17,7 +17,7 @@ app.set('pkg', pkg);
 // middlewares
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(regeneratorRuntime);
+app.use(regeneratorRuntime());
 
 // welcome routes
 app.get('/', (req, res) => {
