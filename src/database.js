@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
+import config from "./config"
 
-mongoose.connect("mongodb+srv://platzi-admin:Pq5HLvhdvBpXJX1d@curso-platzi.o7zlc.mongodb.net/foroDb?retryWrites=true&w=majority", {
+mongoose.connect(config.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true,
