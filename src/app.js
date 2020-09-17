@@ -1,7 +1,6 @@
 import express from 'express'
 import morgan from 'morgan'
 import pkg from '../package.json'
-import regeneratorRuntime from "regenerator-runtime";
 
 import {createRoles} from './libs/initialSetup'
 
@@ -17,7 +16,6 @@ app.set('pkg', pkg);
 // middlewares
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(regeneratorRuntime());
 
 // welcome routes
 app.get('/', (req, res) => {

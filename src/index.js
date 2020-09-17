@@ -1,7 +1,5 @@
 import app from './app'
 import './database'
-import "core-js/stable"
-import "regenerator-runtime/runtime"
 
 app.listen(3000);
 
