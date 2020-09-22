@@ -5,6 +5,7 @@ import pkg from '../package.json'
 
 import {createRoles} from './libs/initialSetup'
 
+import usersRoutes from './routes/user.routes'
 import postsRoutes from './routes/posts.routes'
 import authRoutes from './routes/auth.routes'
 
@@ -34,6 +35,7 @@ app.get('/', (req, res) => {
 })
 
 // routes
+app.use('/api/users', usersRoutes)
 app.use('/api/posts', postsRoutes)
 app.use('/api/auth', authRoutes)
 
