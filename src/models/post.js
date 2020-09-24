@@ -4,7 +4,10 @@ const postSchema = new Schema(
     {
     title: { type: String, required: true },
     content: { type: String, required: true },
-    author: { type: String },
+    author: {
+        ref: "User",
+        type: Schema.ObjectId
+    },
     status: { type: Boolean },
     categories: [{
         ref: "Category",
