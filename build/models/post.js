@@ -17,14 +17,17 @@ const postSchema = new _mongoose.Schema({
     required: true
   },
   author: {
-    type: String
+    ref: "User",
+    type: _mongoose.Schema.ObjectId,
+    required: true
   },
   status: {
     type: Boolean
   },
-  category: {
-    type: String
-  }
+  categories: [{
+    ref: "Category",
+    type: _mongoose.Schema.Types.ObjectId
+  }]
 }, {
   timestamps: true
 });

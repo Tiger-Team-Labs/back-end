@@ -2,9 +2,9 @@ import Post from '../models/post'
 
 export const createPost = async (req, res) => {
     
-    const {title, content, author, status, category} = req.body
+    const {title, content, author, status, categories} = req.body
 
-    const newPost = new Post({title, content, author, status, category});
+    const newPost = new Post({title, content, author: req.userId, status, categories});
 
     const postSaved = await newPost.save()
 

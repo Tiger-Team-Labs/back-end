@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _express = require("express");
 
-var usersCtrl = _interopRequireWildcard(require("../controllers/users.controller"));
+var categoriesCtrl = _interopRequireWildcard(require("../controllers/categories.controller"));
 
 var _middlewares = require("../middlewares");
 
@@ -16,9 +16,10 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 const router = (0, _express.Router)();
-router.get('/', [_middlewares.authJwt.verifyToken, _middlewares.authJwt.isAdmin], usersCtrl.getUsers);
-router.get('/:userId', [_middlewares.authJwt.verifyToken, _middlewares.authJwt.isAdmin], usersCtrl.getUserById);
-router.put('/:userId', [_middlewares.authJwt.verifyToken, _middlewares.authJwt.isAdmin], usersCtrl.updateUserById);
-router.delete('/:userId', [_middlewares.authJwt.verifyToken, _middlewares.authJwt.isAdmin], usersCtrl.deleteUserById);
+router.post('/', [_middlewares.authJwt.verifyToken, _middlewares.authJwt.isAdmin], categoriesCtrl.createCategory);
+router.get('/', categoriesCtrl.getCategories);
+router.get('/:categoryId', categoriesCtrl.getCategoryById);
+router.put('/:categoryId', [_middlewares.authJwt.verifyToken, _middlewares.authJwt.isAdmin], categoriesCtrl.updateCategoryById);
+router.delete('/:categoryId', [_middlewares.authJwt.verifyToken, _middlewares.authJwt.isAdmin], categoriesCtrl.deleteCategoryById);
 var _default = router;
 exports.default = _default;

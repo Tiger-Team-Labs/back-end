@@ -15,14 +15,14 @@ const createPost = async (req, res) => {
     content,
     author,
     status,
-    category
+    categories
   } = req.body;
   const newPost = new _post.default({
     title,
     content,
-    author,
+    author: req.userId,
     status,
-    category
+    categories
   });
   const postSaved = await newPost.save();
   res.status(201).json(postSaved);
