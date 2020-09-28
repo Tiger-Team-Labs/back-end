@@ -15,6 +15,10 @@ var _package = _interopRequireDefault(require("../package.json"));
 
 var _initialSetup = require("./libs/initialSetup");
 
+var _categories = _interopRequireDefault(require("./routes/categories.routes"));
+
+var _user = _interopRequireDefault(require("./routes/user.routes"));
+
 var _posts = _interopRequireDefault(require("./routes/posts.routes"));
 
 var _auth = _interopRequireDefault(require("./routes/auth.routes"));
@@ -43,6 +47,8 @@ app.get('/', (req, res) => {
   });
 }); // routes
 
+app.use('/api/categories', _categories.default);
+app.use('/api/users', _user.default);
 app.use('/api/posts', _posts.default);
 app.use('/api/auth', _auth.default);
 var _default = app;
