@@ -10,10 +10,16 @@ const postSchema = new Schema(
         required: true
     },
     status: { type: Boolean },
-    categories: [{
+    categories: {
         ref: "Category",
         type: Schema.Types.ObjectId
-    }]
+    },
+    comments: [
+        {
+            ref: "Comment",
+            type: Schema.Types.ObjectId
+        }
+    ]
     },
     {
         timestamps: true
