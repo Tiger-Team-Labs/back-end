@@ -24,8 +24,12 @@ const postSchema = new _mongoose.Schema({
   status: {
     type: Boolean
   },
-  categories: [{
+  categories: {
     ref: "Category",
+    type: _mongoose.Schema.Types.ObjectId
+  },
+  comments: [{
+    ref: "Comment",
     type: _mongoose.Schema.Types.ObjectId
   }]
 }, {

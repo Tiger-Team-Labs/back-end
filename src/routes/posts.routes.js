@@ -10,4 +10,9 @@ router.get('/:postId', postsCtrl.getPostById)
 router.put('/:postId', [authJwt.verifyToken, authJwt.isUser ], postsCtrl.updatePostById)
 router.delete('/:postId', [authJwt.verifyToken, authJwt.isUser ], postsCtrl.deletePostById)
 
+router.post('/:postId/comment', [authJwt.verifyToken, authJwt.isUser ], postsCtrl.createComment)
+router.get('/:postId/comment', postsCtrl.readComment)
+router.put('/comment/:commentId', [authJwt.verifyToken, authJwt.isUser ], postsCtrl.updateCommentById)
+router.delete('/comment/:commentId', [authJwt.verifyToken, authJwt.isUser ], postsCtrl.deleteCommentById)
+
 export default router;
