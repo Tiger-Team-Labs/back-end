@@ -1,8 +1,9 @@
 # Forum App API
 
 
+The Forum App API enable devs customize forums. Can be utilized to access, create, read, update and delete users, access posts, comments and categories.
+Also the endpoints are covered by roles permissions and JWT for authorization for each type.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 
 
 
@@ -10,11 +11,13 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 
 
- * **Website:** https://
+ * **Deployed:** https://api-foro.herokuapp.com/
 
- * **Documentation:** https://www.notion.so/C5-Project-ForoApp-888b9f1701f84ec68fe723bc588d6054
+ * **API Doc:** https://documenter.getpostman.com/view/12403851/TVRg9AKo
 
- * **Mockup:** https://www.notion.so/
+ * **Documentation & Requirement:** https://www.notion.so/C5-Project-ForoApp-888b9f1701f84ec68fe723bc588d6054
+
+
 
 
 
@@ -23,6 +26,10 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 
 1. First, clone this repo with `git clone`.
+
+2. Install dependencies, `npm install`
+
+3. Build, `npm run build` 
 
 
 
@@ -33,34 +40,26 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 **Development Environment**
 
-```
-
-```
-
-
+`npm run dev`
 
 >This project runs on **http://localhost:3000**
+
 
 **Production Environment**
 
 
-
-```
-
-```
+`npm start`
 
 
 ### 🗼 Architecture
 
 
-![](https://www.carlosvldz.com/descargas-pdf/archApi.png)
+![](https://www.carlosvldz.com/resources/foroApp/archapi.png)
 
 
 ### 🛠️ Technologies
 
 
-
-  * JavaScript
 
   * Node.JS
 
